@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "door-mod",
+	"version": "${version}",
+	"name": "Door mod",
+	"description": "Allows zombies to break doors.",
+	"authors": [
+		"Arnas"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/door-mod/icon_128.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.arnas.door.DoorMod"
+		],
+		"fabric-datagen": [
+			"net.arnas.door.DoorModDataGenerator"
+		],
+		"client": [
+			"net.arnas.door.ModClient"
+		]
+	},
+	"mixins": [
+		"door-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.20",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
